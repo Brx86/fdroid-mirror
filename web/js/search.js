@@ -5,7 +5,7 @@ const buttonSearch = document.getElementById('search');
 buttonSearch.addEventListener('click', function () {
     let urlRepo = encodeURIComponent(inputRepo.value)
     let urlKeyword = encodeURIComponent(inputKeyword.value.trim())
-    fetch(`http://${window.location.host}/search?r=${urlRepo}&kw=${urlKeyword}`)
+    fetch(`${window.location.href}/search?r=${urlRepo}&kw=${urlKeyword}`)
         .then(response => response.json())
         .then(data => {
             let table = document.createElement("table");

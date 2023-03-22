@@ -44,7 +44,7 @@ async def update():
             cmd, stdout=asyncio.subprocess.PIPE
         )
         try:
-            stdout = (await asyncio.wait_for(proc.communicate(), timeout=40))[0]
+            stdout = (await asyncio.wait_for(proc.communicate(), timeout=300))[0]
         except asyncio.TimeoutError:
             proc.kill()
             return

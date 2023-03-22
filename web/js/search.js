@@ -24,3 +24,8 @@ buttonSearch.addEventListener('click', function () {
             targetElement.innerHTML = table.outerHTML;
         });
 });
+inputKeyword.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        buttonSearch.click();
+    }
+});
